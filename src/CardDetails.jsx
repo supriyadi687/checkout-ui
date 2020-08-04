@@ -107,7 +107,7 @@ export default function CardDetails() {
   }
 
   const paymentHandler = (order, token, auth) => {
-    paymentService.createPayment(getPaymentDto(order, token, auth));
+    paymentService.createPayment(getPaymentDto(order, token, auth)).then((response) => alert(response.status));
   }
 
 
